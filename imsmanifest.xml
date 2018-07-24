@@ -14,9 +14,9 @@
 
   <organizations default="Vanzolini">
     <organization identifier="SEE">
-    <title>Ingressantes</title>
+    <title>Lição</title>
       <item identifier="item1" identifierref="item1" isvisible="true">
-        <title>Ingressantes</title>
+        <title>Lição</title>
       </item>
     </organization>
   </organizations>
