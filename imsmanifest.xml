@@ -1,0 +1,35 @@
+﻿<?xml version="1.0"?>
+<manifest 	identifier="scormpackagedefault" 
+			version="1.2" 
+			xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2" 
+			xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" 
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+			xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd  http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd  http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+	
+	<metadata>
+		<schema>ADL SCORM</schema>
+		<schemaversion>1.2</schemaversion>
+		<adlcp:location>imsmetadata.xml</adlcp:location>
+	</metadata>
+
+  <organizations default="Vanzolini">
+    <organization identifier="SEE">
+    <title>Ingressantes</title>
+      <item identifier="item1" identifierref="item1" isvisible="true">
+        <title>Ingressantes</title>
+      </item>
+    </organization>
+  </organizations>
+
+  <resources>
+    <resource identifier="item1" type="webcontent" adlcp:scormtype="sco" href="index.html">
+      <file href="index.html"/>
+      <file href="css/style.css"/>
+      <file href="js/main.js"/>
+      <file href="js/jquery-3.1.0.min.js"/>
+      <file href="imgs/img1.png"/>
+	    </resource>
+
+  </resources>
+
+</manifest>
