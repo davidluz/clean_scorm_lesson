@@ -6,32 +6,197 @@
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/main.js"></script>
 <link rel="stylesheet" href="css/simple-grid.min.css">
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+  <link href="https://vjs.zencdn.net/7.0.5/video-js.css" rel="stylesheet">
+
+  <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+  <script src="http://vjs.zencdn.net/ie8/ie8-version/videojs-ie8.min.js"></script>
+
 </head>
 
 <body>
 	<main>
-	<article class="pages">
+	<article class="pages" data-pageID="1">
 	 <div class="container">
     	 <div class="row">
      		<div class="col-1"></div>
-     		<div class="col-10">Welcome Page</div>
+     		<div class="col-10"><img src="imgs/bg1.jpg" class="responsive">
+            <p class="justify">Este é um exemplo de uma página
+            de conteúdo</p>
+            <p class="justify">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p><p class="justify"> Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p> 
+     		</div>
      		<div class="col-1"></div>	
      	 </div>		
      </div>
-     </article>				
+     </article>	
+
+     <article class="pages" data-pageID="2">
+	 <div class="container">
+    	 <div class="row">
+     		<div class="col-1"></div>
+     		<div class="col-10">
+             <div class="wrapper">
+ <div class="videocontent">
+	<div class="wrapper">
+ <div class="videocontent">
+	<video id="myvideo" class="video-js vjs-default-skin vjs-16-9 vjs-big-play-centered" controls
+ preload="auto" width="640" height="264" 
+data-setup='{"fluid": true}'>
+ <source src="https://efap.blob.core.windows.net/asset-4409663b-8860-4858-85eb-437a4a51b67a/Papel da escola.mp4?sv=2015-07-08&sr=c&si=0e61aa14-e16c-4970-8888-0db3262b71eb&sig=kboliOJf%2BdwZv1FnZEs4rjktwOYTT7HJ7SC757L%2BM1A%3D&st=2018-07-17T18%3A39%3A03Z&se=2118-07-17T18%3A39%3A03Z" type='video/mp4'>
+</video>
+ </div>
+</div>
+ </div>
+</div>
+   <script src="https://vjs.zencdn.net/7.0.5/video.js"></script>
+  <div class="block-video"><i class="fas fa-video fa-1x iconblock"></i><p id="p1">Lagos de água</p></div>
+  <div class="block-video"><i class="fas fa-video fa-1x iconblock"></i><p id="p2">Passarinho cantando</p></div>
+  <div class="block-video"><i class="fas fa-pencil-alt fa-1x iconblock"></i><p id="p3">Questão 1</p></div>
+  <div class="block-video"><i class="fas fa-video fa-1x iconblock"></i><p id="p4">Coelho acordando</p></div>
+  </div>
+
+     		<div class="col-1"></div>	
+     	 </div>		
+     </div>
+     </article>	
+
+      <article class="pages" data-pageID="3">
+	 <div class="container">
+    	 <div class="row">
+     		<div class="col-1"></div>
+     		<div class="col-10">
+            <p class="justify">Página 3</p> 
+     		</div>
+     		<div class="col-1"></div>	
+     	 </div>		
+     </div>
+     </article>		
+
+
+
 	</main>	
 </body>
-<nav>
-	<div class="foward">Avançar</div>
-	<div class="back">Voltar</div>
-	<div class="counter">2/10</div>
-</nav>
+
 <footer>
 	
+<nav>
+	<div class="prev arrows"><i class="fas fa-arrow-circle-left fa-3x arrows-block"></i></div>
+	<div class="next arrows"><i class="fas fa-arrow-circle-right fa-3x arrows-block"></i></div>
+	
+	
+</nav>
 </footer>
 <style>
-	
+body{
+	display: none;
+}
+
+.responsive{
+width: 100%;
+height: auto;
+}
+.justify{
+	text-align: justify;
+}
+
+
+
+footer{
+	background-color: #768391;
+	opacity: 0.9;
+	bottom: 0px;
+	height: 80px;
+	position: fixed;
+	width: 100%;
+}
+.arrows-block{
+	cursor: pointer;
+	color: #fff;
+	float: left;
+	margin-left: 50px;
+	margin-top: 20px;
+}
+.arrows{
+margin-left: 60%;	
+}
+.counter{
+color: #fff;
+font-size: 20px;
+}
+.pages{
+display: none;	
+}
+
+.block-video{
+width: 100%;
+background-color: #f7f8fa;
+height: 80px;
+margin-top: -16px;
+}
+
+.block-video p{
+padding: 10px;
+margin-left: 50px;
+font-weight: bold;
+cursor: pointer;
+}
+
+.iconblock{
+margin: 20px;
+position: absolute;
+clear: both;
+}
 </style>
+<script>
+$(document).ready(function(){
+
+var myPlayer = videojs('myvideo');
+
+
+
+var currentPage = 1;
+$("body").fadeIn();	
+$("[data-pageID='1']").fadeIn();	
+
+$(".next").click(function(){
+
+if(currentPage<30){currentPage = currentPage+1;}
+var t = "[data-pageID='"+currentPage+"']";
+$(".pages").hide();
+$(t).fadeIn();
+});
+
+$(".prev").click(function(){
+if(currentPage>1){currentPage = currentPage-1;}
+var t = "[data-pageID='"+currentPage+"']";
+$(".pages").hide();
+$(t).fadeIn();
+
+});
+
+
+$("#p1").click(function(){
+myPlayer.currentTime(14);
+myPlayer.play();
+});
+
+$("#p2").click(function(){
+myPlayer.currentTime(19);
+myPlayer.play();
+});
+
+$("#p3").click(function(){
+myPlayer.currentTime(120);
+});
+
+$("#p4").click(function(){
+myPlayer.currentTime(44);
+myPlayer.play();
+});
+
+});	
+
+</script>
 
 </html>
