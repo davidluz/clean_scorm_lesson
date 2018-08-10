@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+body{
+  display: none;
+}  
+</style>  
 <meta charset="UTF-8">
 <title>Lesson template</title>
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/main.js"></script>
+
 <link rel="stylesheet" href="css/simple-grid.min.css">
-<link rel="stylesheet" href="css/style.css">
+
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
   <link href="https://vjs.zencdn.net/7.0.5/video-js.css" rel="stylesheet">
 
@@ -17,14 +23,14 @@
 
 <body>
 	<main>
-	<article class="pages" data-pageID="1">
+	<article class="pages scroll" data-pageID="1">
 	 <div class="container">
     	 <div class="row">
      		<div class="col-1"></div>
      		<div class="col-10"><img src="imgs/bg1.jpg" class="responsive">
             <p class="justify">Este é um exemplo de uma página
             de conteúdo</p>
-            <p class="justify">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p><p class="justify"> Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p> 
+            <p class="justify">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p><p class="justify"> Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p><br><br><br> 
      		</div>
      		<div class="col-1"></div>	
      	 </div>		
@@ -34,8 +40,29 @@
      <article class="pages" data-pageID="2">
 	 <div class="container">
     	 <div class="row">
-     		<div class="col-1"></div>
-     		<div class="col-10">
+     	
+     		<div class="col-12">
+     			 <div class="question-container">
+  					<p>De acordo com dados que você viu neste vídeo, a taxa de proficiência em matemática de alunos com nível socieconômico baixo e alto são respectivamente.</p>
+        
+         <form>
+  <input type="radio" name="gender" value="male" checked> 2,5% e 10%<br>
+  <input type="radio" name="gender" value="female"> 20% e 42%<br>
+  <input type="radio" name="gender" value="other"> 49% e 94 <br>
+  <input type="radio" name="gender" value="other">2,5% e 58,2%
+</form> <br>
+          <button class="response">Responder</button>
+          <div class="feedbacks correto">
+            <p>Correto!</p> <br>
+            <button>Avançar</button>
+          </div>
+
+           <div class="feedbacks incorreto">
+            <p>Incorreto!</p>
+                     <br>
+            <button>Avançar</button>
+          </div>
+  				</div>
              <div class="wrapper">
  <div class="videocontent">
 	<div class="wrapper">
@@ -43,20 +70,26 @@
 	<video id="myvideo" class="video-js vjs-default-skin vjs-16-9 vjs-big-play-centered" controls
  preload="auto" width="640" height="264" 
 data-setup='{"fluid": true}'>
- <source src="https://efap.blob.core.windows.net/asset-4409663b-8860-4858-85eb-437a4a51b67a/Papel da escola.mp4?sv=2015-07-08&sr=c&si=0e61aa14-e16c-4970-8888-0db3262b71eb&sig=kboliOJf%2BdwZv1FnZEs4rjktwOYTT7HJ7SC757L%2BM1A%3D&st=2018-07-17T18%3A39%3A03Z&se=2118-07-17T18%3A39%3A03Z" type='video/mp4'>
-</video>
+ <source src="https://efap.blob.core.windows.net/asset-93c6f354-5b55-482f-9e40-166cb1ee9e35/Dados%20educacionais.mp4?sv=2015-07-08&sr=c&si=b0f222d7-bd08-4a8b-9202-bb1c9f2456b6&sig=vrfIfF7Svf7x7u%2F8qjiTu07I%2Fw9lHsx1WAeiy3Yoo1I%3D&st=2018-07-17T18%3A42%3A20Z&se=2118-07-17T18%3A42%3A20Z" type='video/mp4'>
+	</video>
+
  </div>
 </div>
  </div>
 </div>
    <script src="https://vjs.zencdn.net/7.0.5/video.js"></script>
-  <div class="block-video"><i class="fas fa-video fa-1x iconblock"></i><p id="p1">Lagos de água</p></div>
-  <div class="block-video"><i class="fas fa-video fa-1x iconblock"></i><p id="p2">Passarinho cantando</p></div>
-  <div class="block-video"><i class="fas fa-pencil-alt fa-1x iconblock"></i><p id="p3">Questão 1</p></div>
-  <div class="block-video"><i class="fas fa-video fa-1x iconblock"></i><p id="p4">Coelho acordando</p></div>
+  <div class="block-video" ><i id="b1" class="fas fa-video fa-1x iconblock"></i><p id="p1">Taxa de proficência em Matemática</p></div>
+  
+  <div class="block-video" ><i id="b2" class="fas fa-video fa-1x iconblock"></i><p id="p2">Taxa de atendimento do Ensino Médio</p></div>
+  <div class="block-video" ><i id="b3" class="fas fa-video fa-1x iconblock"></i><p id="p3">Distância entre ricos e pobres
+</p></div>
+  
+  <div class="block-video" ><i id="b4" class="fas fa-pencil-alt fa-1x iconblock"></i><p id="p4" >Atividade</p></div>
+  <br><br><br>
   </div>
+ 
 
-     		<div class="col-1"></div>	
+     		
      	 </div>		
      </div>
      </article>	
@@ -76,9 +109,7 @@ data-setup='{"fluid": true}'>
 
 
 	</main>	
-</body>
-
-<footer>
+	<footer>
 	
 <nav>
 	<div class="prev arrows"><i class="fas fa-arrow-circle-left fa-3x arrows-block"></i></div>
@@ -87,116 +118,9 @@ data-setup='{"fluid": true}'>
 	
 </nav>
 </footer>
-<style>
-body{
-	display: none;
-}
 
-.responsive{
-width: 100%;
-height: auto;
-}
-.justify{
-	text-align: justify;
-}
+</body>
 
-
-
-footer{
-	background-color: #768391;
-	opacity: 0.9;
-	bottom: 0px;
-	height: 80px;
-	position: fixed;
-	width: 100%;
-}
-.arrows-block{
-	cursor: pointer;
-	color: #fff;
-	float: left;
-	margin-left: 50px;
-	margin-top: 20px;
-}
-.arrows{
-margin-left: 60%;	
-}
-.counter{
-color: #fff;
-font-size: 20px;
-}
-.pages{
-display: none;	
-}
-
-.block-video{
-width: 100%;
-background-color: #f7f8fa;
-height: 80px;
-margin-top: -16px;
-}
-
-.block-video p{
-padding: 10px;
-margin-left: 50px;
-font-weight: bold;
-cursor: pointer;
-}
-
-.iconblock{
-margin: 20px;
-position: absolute;
-clear: both;
-}
-</style>
-<script>
-$(document).ready(function(){
-
-var myPlayer = videojs('myvideo');
-
-
-
-var currentPage = 1;
-$("body").fadeIn();	
-$("[data-pageID='1']").fadeIn();	
-
-$(".next").click(function(){
-
-if(currentPage<30){currentPage = currentPage+1;}
-var t = "[data-pageID='"+currentPage+"']";
-$(".pages").hide();
-$(t).fadeIn();
-});
-
-$(".prev").click(function(){
-if(currentPage>1){currentPage = currentPage-1;}
-var t = "[data-pageID='"+currentPage+"']";
-$(".pages").hide();
-$(t).fadeIn();
-
-});
-
-
-$("#p1").click(function(){
-myPlayer.currentTime(14);
-myPlayer.play();
-});
-
-$("#p2").click(function(){
-myPlayer.currentTime(19);
-myPlayer.play();
-});
-
-$("#p3").click(function(){
-myPlayer.currentTime(120);
-});
-
-$("#p4").click(function(){
-myPlayer.currentTime(44);
-myPlayer.play();
-});
-
-});	
-
-</script>
+<link rel="stylesheet" href="css/style.css" rel="stylesheet">
 
 </html>
