@@ -96,6 +96,11 @@ box-shadow:none;
 -webkit-box-shadow: 
 }
 
+.counter-screen{
+position: absolute;
+right: 40px !important;
+}
+
 .w3-light{
 background-color: #f1f1f1;
 }
