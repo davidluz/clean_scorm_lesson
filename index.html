@@ -1,126 +1,279 @@
 <!DOCTYPE html>
-<html>
-<head>
-<style>
-body{
-  display: none;
-}  
-</style>  
-<meta charset="UTF-8">
-<title>Lesson template</title>
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/main.js"></script>
+<html lang="pt-br">
+   <head>
+      <style>body{display: none;}</style>
 
-<link rel="stylesheet" href="css/simple-grid.min.css">
+      <meta charset="UTF-8" >
+      <title>Lesson template</title>
 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
-  <link href="https://vjs.zencdn.net/7.0.5/video-js.css" rel="stylesheet">
+      <!-- Dependências -->
+      <script src="js/jquery-3.3.1.min.js"></script>
+      <script src="js/SCORM_API_wrapper.js"></script>
+      
+       
+        <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
 
-  <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
-  <script src="http://vjs.zencdn.net/ie8/ie8-version/videojs-ie8.min.js"></script>
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+      <link href="https://vjs.zencdn.net/7.0.5/video-js.css" rel="stylesheet">
 
-</head>
+      <script src="js/main.js"></script>
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Fim de Dependências -->
+   </head>
+   <body>
+      <main>
 
-<body>
-	<main>
-	<article class="pages scroll" data-pageID="1">
-	 <div class="container">
-    	 <div class="row">
-     		<div class="col-1"></div>
-     		<div class="col-10"><img src="imgs/bg1.jpg" class="responsive">
-            <p class="justify">Este é um exemplo de uma página
-            de conteúdo</p>
-            <p class="justify">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p><p class="justify"> Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p><br><br><br> 
-     		</div>
-     		<div class="col-1"></div>	
-     	 </div>		
-     </div>
-     </article>	
+         <!-- Página 1 -->
+         <article class="pages scroll" data-pageID="1">
+            <div class="container ">
+               <div class="row valign-wrapper">
+                 
+                  <div class="col m12">
 
-     <article class="pages" data-pageID="2">
-	 <div class="container">
-    	 <div class="row">
-     	
-     		<div class="col-12">
-     			 <div class="question-container">
-  					<p>De acordo com dados que você viu neste vídeo, a taxa de proficiência em matemática de alunos com nível socieconômico baixo e alto são respectivamente.</p>
-        
-         <form>
-  <input type="radio" name="gender" value="male" checked> 2,5% e 10%<br>
-  <input type="radio" name="gender" value="female"> 20% e 42%<br>
-  <input type="radio" name="gender" value="other"> 49% e 94 <br>
-  <input type="radio" name="gender" value="other">2,5% e 58,2%
-</form> <br>
-          <button class="response">Responder</button>
-          <div class="feedbacks correto">
-            <p>Correto!</p> <br>
-            <button>Avançar</button>
-          </div>
+                     <h2>Página 1</h2>
+                     
+                     <p>Este é um exemplo de uma página
+                        de conteúdo
+                     </p>
+                     <p>"Este é um exemplo de um recurso didático acessível</p>
+                     <p> Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
 
-           <div class="feedbacks incorreto">
-            <p>Incorreto!</p>
-                     <br>
-            <button>Avançar</button>
-          </div>
-  				</div>
-             <div class="wrapper">
- <div class="videocontent">
-	<div class="wrapper">
- <div class="videocontent">
-	<video id="myvideo" class="video-js vjs-default-skin vjs-16-9 vjs-big-play-centered" controls
- preload="auto" width="640" height="264" 
-data-setup='{"fluid": true}'>
- <source src="https://efap.blob.core.windows.net/asset-93c6f354-5b55-482f-9e40-166cb1ee9e35/Dados%20educacionais.mp4?sv=2015-07-08&sr=c&si=b0f222d7-bd08-4a8b-9202-bb1c9f2456b6&sig=vrfIfF7Svf7x7u%2F8qjiTu07I%2Fw9lHsx1WAeiy3Yoo1I%3D&st=2018-07-17T18%3A42%3A20Z&se=2118-07-17T18%3A42%3A20Z" type='video/mp4'>
-	</video>
+                      <p> Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
 
- </div>
-</div>
- </div>
-</div>
-   <script src="https://vjs.zencdn.net/7.0.5/video.js"></script>
-  <div class="block-video" ><i id="b1" class="fas fa-video fa-1x iconblock"></i><p id="p1">Taxa de proficência em Matemática</p></div>
-  
-  <div class="block-video" ><i id="b2" class="fas fa-video fa-1x iconblock"></i><p id="p2">Taxa de atendimento do Ensino Médio</p></div>
-  <div class="block-video" ><i id="b3" class="fas fa-video fa-1x iconblock"></i><p id="p3">Distância entre ricos e pobres
-</p></div>
-  
-  <div class="block-video" ><i id="b4" class="fas fa-pencil-alt fa-1x iconblock"></i><p id="p4" >Atividade</p></div>
-  <br><br><br>
-  </div>
+                      <p> Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
+                  </div>
+                 
+                  
+               </div>
+            </div>
+         </article>
+
+         <!-- fim -->
+
+
+          <!-- Página 2 -->
+         <article class="pages scroll" data-pageID="2">
+            <div class="container ">
+               <div class="row valign-wrapper">
+                 
+                  <div class="col m7">
+
+                      <h2>Página 2</h2>
+                     
+                     <p>Este é um exemplo de uma página
+                        de conteúdo
+                     </p>
+                     <p>"Este é um exemplo de um recurso didático acessível</p>
+                     <p> Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
+
+                    
+                  </div>
+                  <div class="col m5 "><img alt="descrição da imagem" src="imgs/acessibilidade.jpg" class="responsive"></div>
+                  
+               </div>
+            </div>
+         </article>
+
+         <!-- fim -->
+
+         <!-- Página 3-->
+         <article class="pages" data-pageID="3">
+            <div class="container">
+               <div class="row">
+                  
+                  <div class="col m12">
+                      <h2>Página 3</h2>
+                     <div class="question-container">
+                        <p>De acordo com dados que você viu neste vídeo, a taxa de proficiência em matemática de alunos com nível socieconômico baixo e alto são respectivamente.</p>
+                        <form>
+                           <input type="radio" name="gender" value="male" checked> 2,5% e 10%<br>
+                           <input type="radio" name="gender" value="female"> 20% e 42%<br>
+                           <input type="radio" name="gender" value="other"> 49% e 94 <br>
+                           <input type="radio" name="gender" value="other">2,5% e 58,2%
+                        </form>
+                        <br>
+                        <button class="response">Responder</button>
+                        <div class="feedbacks correto">
+                           <p>Correto!</p>
+                           <br>
+                           <button>Avançar</button>
+                        </div>
+                        <div class="feedbacks incorreto">
+                           <p>Incorreto!</p>
+                           <br>
+                           <button>Avançar</button>
+                        </div>
+                     </div>
+                     <div class="wrapper">
+                        <div class="videocontent">
+                           <div class="wrapper">
+                              <div class="videocontent">
+                                 <video id="myvideo" class="video-js vjs-default-skin vjs-16-9 vjs-big-play-centered" controls
+                                    preload="auto" width="640" height="264" 
+                                    data-setup='{"fluid": true}'>
+                                    <source src="https://efap.blob.core.windows.net/asset-93c6f354-5b55-482f-9e40-166cb1ee9e35/Dados%20educacionais.mp4?sv=2015-07-08&sr=c&si=b0f222d7-bd08-4a8b-9202-bb1c9f2456b6&sig=vrfIfF7Svf7x7u%2F8qjiTu07I%2Fw9lHsx1WAeiy3Yoo1I%3D&st=2018-07-17T18%3A42%3A20Z&se=2118-07-17T18%3A42%3A20Z" type='video/mp4'>
+                                 </video>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <script src="https://vjs.zencdn.net/7.0.5/video.js"></script>
+                     <div class="block-video" >
+                        <i id="b1" class="fas fa-video fa-1x iconblock"></i>
+                        <p id="p1">Taxa de proficência em Matemática</p>
+                     </div>
+                     <div class="block-video" >
+                        <i id="b2" class="fas fa-video fa-1x iconblock"></i>
+                        <p id="p2">Taxa de atendimento do Ensino Médio</p>
+                     </div>
+                     <div class="block-video" >
+                        <i id="b3" class="fas fa-video fa-1x iconblock"></i>
+                        <p id="p3">Distância entre ricos e pobres</p>
+                     </div>
+                     <div class="block-video" >
+                        <i id="b4" class="fas fa-pencil-alt fa-1x iconblock"></i>
+                        <p id="p4" >Atividade</p>
+                     </div>
+                     <br><br><br>
+                  </div>
+                  
+               </div>
+            </div>
+         </article>
+         <!-- Fim-->
+
+         <!-- Página 4-->
+         <article class="pages" data-pageID="4">
+            <div class="container">
+               <div class="row">
+                 
+                  <div class="col m12">
+                      <h2>Página 4</h2>
+                     <p class="justify">Página 4</p>
+                  </div>
+                 
+               </div>
+            </div>
+         </article>
+         <!-- Fim-->
+
+         <!-- Página 5-->
+         <article class="pages" data-pageID="5">
+            <div class="container">
+               <div class="row">
+                  
+                  <div class="col m12">
+                      <h2>Página 5</h2>
+                     <p class="justify">Página 5</p>
+                  </div>
+                  
+               </div>
+            </div>
+         </article>
+         <!-- Fim-->
+
+
+            <!-- Página 6-->
+         <article class="pages" data-pageID="6">
+            <div class="container">
+               <div class="row">
+                  
+                  <div class="col m12">
+                      <h2>Página 6</h2>
+                     <p class="justify">Página 6</p>
+                  </div>
+                 
+               </div>
+            </div>
+         </article>
+         <!-- Fim-->
+
+
+            <!-- Página 7-->
+         <article class="pages" data-pageID="7">
+            <div class="container">
+               <div class="row">
+                 
+                  <div class="col m12">
+                      <h2>Página 7</h2>
+                     <p class="justify">Página 7</p>
+                  </div>
+                  
+               </div>
+            </div>
+         </article>
+         <!-- Fim-->
+
+             <!-- Página 8-->
+         <article class="pages" data-pageID="8">
+            <div class="container">
+               <div class="row">
+                  
+                  <div class="col m12">
+                      <h2>Página 8</h2>
+                     <p class="justify">Página 8</p>
+                  </div>
+                  
+               </div>
+            </div>
+         </article>
+         <!-- Fim-->
+
+         <!-- Página 9-->
+         <article class="pages" data-pageID="9">
+            <div class="container">
+               <div class="row">
+                  
+                  <div class="col m12">
+                      <h2>Página 9</h2>
+                     <p class="justify">Página 9</p>
+                  </div>
+                 
+               </div>
+            </div>
+         </article>
+         <!-- Fim-->
+
+         <!-- Página 10-->
+         <article class="pages" data-pageID="10">
+            <div class="container">
+               <div class="row">
+                  
+                  <div class="col m12">
+                      <h2>Página 10</h2>
+                     <p class="justify">Página 10</p>
+                  </div>
+                 
+               </div>
+            </div>
+         </article>
+         <!-- Fim-->
+      </main>
+      <footer>
+         
+         <!-- Barra de Progresso-->
+         <div class="w3-light-grey">
+         <div id="myBar" class="w3-light" style="height:8px;width:10%"></div>
+         </div>
+          <!-- Menu navegação-->
+         <nav>
+            <div class="prev arrows"><i class="fas fa-arrow-circle-left fa-3x arrows-block"></i></div>
+            <div class="next arrows"><i class="fas fa-arrow-circle-right fa-3x arrows-block"></i></div>
+
+            <div class="counter-screen"><span class="scurrent">0</span>/<span class="stotal">0</span></div>
+         </nav>
+         <!-- Fim-->
+
+      </footer>
+   </body>
+   <style>
+      .counter-screen{
+         position: absolute;
+         right: 40px !important;
+      }
+   </style>
  
-
-     		
-     	 </div>		
-     </div>
-     </article>	
-
-      <article class="pages" data-pageID="3">
-	 <div class="container">
-    	 <div class="row">
-     		<div class="col-1"></div>
-     		<div class="col-10">
-            <p class="justify">Página 3</p> 
-     		</div>
-     		<div class="col-1"></div>	
-     	 </div>		
-     </div>
-     </article>		
-
-
-
-	</main>	
-	<footer>
-	
-<nav>
-	<div class="prev arrows"><i class="fas fa-arrow-circle-left fa-3x arrows-block"></i></div>
-	<div class="next arrows"><i class="fas fa-arrow-circle-right fa-3x arrows-block"></i></div>
-	
-	
-</nav>
-</footer>
-
-</body>
-
-<link rel="stylesheet" href="css/style.css" rel="stylesheet">
-
 </html>
